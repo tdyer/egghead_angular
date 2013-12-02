@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>AngularJS Tutorials</title>
+   <link rel="stylesheet" href="css/foundation.css" />
+ </head>
+ <body>
+
+   <div ng-app="">
+     <input type="text" ng-model="data.message"/>
+     <h1>{{data.message}}</h1>
+     <div class="{{data.message}}">
+       <!-- type label, button,panel, alert-box -->
+       Wrap me in a foundation component.
+     </div>
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+ </body>
+</html>

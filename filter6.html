@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="css/foundation.css" ></link>
+</head>
+<body>
+  <div ng-app="myApp">
+    <!-- 
+         each controller will get it's message from a service that is 
+         shared btw controllers.
+      --> 
+         
+    <div ng-controller="FirstCtrl">
+      <input type="text" ng-model="data.message"/>
+      <h1>{{data.message}}</h1>
+    </div>
+
+    <div ng-controller="SecondCtrl">
+      <input type="text" ng-model="data.message"/>
+      <h1>{{data.message|reverse}}</h1>
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script type="text/javascript" src="main6.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="css/foundation.css" ></link>
+    <script type="text/javascript" src="main3.js"></script>
+</head>
+<body>
+  <div ng-app="">
+    <!-- parent scope defines the data.message -->
+    <input type="text" ng-model="data.message"/>
+    <h1>{{data.message}}</h1>
+
+    <div ng-controller="FirstCtrl">
+      <!-- child scope gets the data.message from the parent scope-->
+      <input type="text" ng-model="data.message"/>
+      <h1>{{data.message}}</h1>
+    </div>
+    <div ng-controller="SecondCtrl">
+      <!-- child scope gets the data.message from the parent scope-->
+      <input type="text" ng-model="data.message"/>
+      <h1>{{data.message}}</h1>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+</body>
+</html>

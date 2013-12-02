@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="css/foundation.css" ></link>
+</head>
+<body>
+  <div ng-app="myApp">
+   <div ng-controller="AvengersCtrl">
+    <!-- Filter by name only, not character -->
+    <!-- <input type="text" ng-model="search.name"/> -->
+    <!-- Filter by character only, not name -->
+    <!-- <input type="text" ng-model="search.character"/> -->
+   <!-- Filter by name or character -->
+    <input type="text" ng-model="search.$"/>
+    <table>
+      <tr ng-repeat="actor in avengers.cast | filter:search">
+        <td> {{actor.name}}</td> 
+        <td> {{actor.character}}</td> 
+      <tr>
+    </table>
+   </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script type="text/javascript" src="main8.js"></script>
+
+</body>
+</html>
